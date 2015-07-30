@@ -1,0 +1,28 @@
+{"port": {
+    "status": "ACTIVE",
+    "binding:host_id": "compute-0-1.local",
+    "allowed_address_pairs": [],
+    "extra_dhcp_opts": [],
+    "device_owner": "compute:zone0",
+    "binding:profile": {},
+    "fixed_ips": [
+        {
+            "subnet_id": "953b210b-9f0d-4b69-bf59-9c02096123cc",
+            "ip_address": "1.1.1.11"
+        }
+    ],
+    "id": "0aabeb3d-9fa8-4de9-8d8b-06c7f6425128",
+    "security_groups": ["4d4bf23c-ba15-4a64-b513-2e414a9f81d0"],
+    "device_id": "edc05b07-160a-4d97-b902-e6907c209d59",
+    "name": "",
+    "admin_state_up": true,
+    "network_id": "55a3c8b0-eb28-4915-9981-d7a1deb7b9ae",
+    "tenant_id": "c2edb9de95964f8ca45766d12e22ec44",
+    "binding:vif_details": {
+        "port_filter": true,
+        "ovs_hybrid_plug": true
+    },
+    "binding:vnic_type": "normal",
+    "binding:vif_type": "ovs",
+    "mac_address": "fa:16:3e:2c:4d:c2"
+}}

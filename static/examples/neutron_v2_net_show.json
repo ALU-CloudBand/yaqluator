@@ -1,0 +1,13 @@
+{"network": {
+    "status": "ACTIVE",
+    "subnets": ["953b210b-9f0d-4b69-bf59-9c02096123cc"],
+    "name": "net1dfd740c6Index0",
+    "provider:physical_network": "RegionOne",
+    "admin_state_up": true,
+    "tenant_id": "c2edb9de95964f8ca45766d12e22ec44",
+    "provider:network_type": "vlan",
+    "router:external": false,
+    "shared": false,
+    "id": "55a3c8b0-eb28-4915-9981-d7a1deb7b9ae",
+    "provider:segmentation_id": 2
+}}

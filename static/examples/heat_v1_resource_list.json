@@ -1,0 +1,42 @@
+{"resources": [
+    {
+        "resource_name": "server0",
+        "links": [
+            {
+                "href": "http://10.48.3.5:8004/v1/c2edb9de95964f8ca45766d12e22ec44/stacks/myStack4c2160e8Index0/2252cd08-3c5d-465d-9b50-a0535e70dec9/resources/server0",
+                "rel": "self"
+            },
+            {
+                "href": "http://10.48.3.5:8004/v1/c2edb9de95964f8ca45766d12e22ec44/stacks/myStack4c2160e8Index0/2252cd08-3c5d-465d-9b50-a0535e70dec9",
+                "rel": "stack"
+            }
+        ],
+        "logical_resource_id": "server0",
+        "resource_status": "CREATE_FAILED",
+        "updated_time": "2015-07-15T01:02:06Z",
+        "required_by": [],
+        "resource_status_reason": "BadRequest: Expecting to find username or userId in passwordCredentials - the server could not comply with the request since it is either malformed or otherwise incorrect. The client is assumed to be in error. (HTTP 400)",
+        "physical_resource_id": "3e655c01-ccd6-4c20-bb0b-4b90552e9ac8",
+        "resource_type": "OS::Nova::Server"
+    },
+    {
+        "resource_name": "server1",
+        "links": [
+            {
+                "href": "http://10.48.3.5:8004/v1/c2edb9de95964f8ca45766d12e22ec44/stacks/myStack4c2160e8Index0/2252cd08-3c5d-465d-9b50-a0535e70dec9/resources/server1",
+                "rel": "self"
+            },
+            {
+                "href": "http://10.48.3.5:8004/v1/c2edb9de95964f8ca45766d12e22ec44/stacks/myStack4c2160e8Index0/2252cd08-3c5d-465d-9b50-a0535e70dec9",
+                "rel": "stack"
+            }
+        ],
+        "logical_resource_id": "server1",
+        "resource_status": "CREATE_COMPLETE",
+        "updated_time": "2015-07-15T01:02:05Z",
+        "required_by": [],
+        "resource_status_reason": "state changed",
+        "physical_resource_id": "edc05b07-160a-4d97-b902-e6907c209d59",
+        "resource_type": "OS::Nova::Server"
+    }
+]}

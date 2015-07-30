@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YAQLuator - an online YAQL evaluator</title>
+    <meta name="description" content="A free online evaluator for YAQL - A query language for querying YAML / JSON">
+    <meta name="keywords" content="YAQL,query,evaluate,extract,obtain,online,YAML,JSON,JSONPath,xpath">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/yaqluator.css">
+    <link rel="stylesheet" href="css/select2.min.css">
+
+    <link rel="icon" href="favicon.png">
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/yaml.js"></script>
+    <script src="js/ajaxq.js"></script>
+    <script src="js/select2.full.min.js"></script>
+
+    <script src="js/bootstrap3-typeahead.min.js"></script>
+    <script src="js/yaqluator.js"></script>
+
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<div id="wrapper">
+
+    <div id="header">
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+        <div class="container page-header">
+            <h2 ct-id="1" data-meaningful="true">
+                <span class="colored">Y</span>et
+                <span class="colored">A</span>nother
+                <span class="colored">Q</span>uery
+                <span class="colored">L</span>anguage
+                Evaluator
+            </h2>
+
+            <h3>
+                <a href="https://github.com/stackforge/yaql" target="_blank">YAQL</a> is a query language used to query
+                /
+                extract
+                data from a YAML / JSON.
+            </h3>
+            <h4>
+                <br/>YAQL is for YAML, like XPath is for XML or JSONPath is for JSON
+            </h4>
+        </div>
+    </div>
+
+
+    <div id="content">
+        <div id="content-spacer-top"></div>
+        <div id="inner-content">
+            <div style="float: left; width: 50%; height: 100%">
+                <!-- YAML input -->
+                <div class="panel panel-default"
+                     style="height: 100%; margin-top: -190px; padding-top: 190px; margin-right: 20px; ">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <strong>YAML / JSON</strong>
+                        </h3>
+                    </div>
+                    <div class="panel-body" style="height: 100%">
+
+                        <div class="row" style="margin-bottom: 5px; vertical-align: top;">
+                            <div class="col-lg-5 col-md-12">
+                                <input type="file" id="fileInput" name="fileInput" onchange="handleFiles()"
+                                       style="float:left"/>
+                            </div>
+                            <div class="col-lg-1 col-md-1">
+                                <div class="cm-strong">--OR--</div>
+                            </div>
+                            <div class="pull-right" style="padding-right: 15px">
+                                <select id="exampleDropDown" name="exampleDropDown"
+                                        title="OpenStack API response examples">
+                                    <option value="">OpenStack Examples</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row-fluid y-container" style="height: 100%; padding-top: 70px;">
+
+                        <textarea class="form-control" id="yamlInput" style="height: 100%; margin-top: -70px;"
+                                  placeholder="Type YAML / JSON - or - browse for a file / URL - or - select an OpenStack response example above"></textarea>
+
+                            <div id="yamlAlert" class="help-block"></div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- YAQL input -->
+                <div class="panel panel-default" style="margin-right: 20px;" >
+                    <div class="panel-heading yaql-exp-title">
+                        <h3 class="panel-title"><strong>YAQL Expression</strong>
+                            <small>(yaql 0.2.7)</small>
+                        </h3>
+
+                    </div>
+                    <div class="panel-body" >
+                        <div class="row y-container" >
+                            <div class="col-lg-9 col-md-12" style="width:100%; padding-right: 135px; margin-right: -135px">
+                                <input class="form-control" id="yaqlInput" placeholder="insert YAQL expression"
+                                       data-provide="typeahead" autocomplete="off"/>
+
+                                <div id="yaqlAlert" class="help-block"></div>
+                            </div>
+                            <div class="col-lg-2 col-md-12" style="float: right">
+                                <button type="button" class="btn btn-success " id="evaluate" >
+                                    Evaluate!
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--YAQL Expression Result-->
+            <div class="panel panel-default"
+                 style="float: right; width: 50%; height:100%; margin-top: -60px; padding-top: 60px; ">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <strong>YAQL Expression Result</strong>
+                    </h3>
+                </div>
+                <div class="panel-body" style="height: 100%;">
+                    <div class="row-fluid" style="height: 100%; padding-top: 30px;">
+                        <textarea class="form-control" id="result" style="height: 100%; margin-top: -30px;"
+                                  placeholder="press on evaluate to get result"></textarea>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="divFooter">
+        Created by
+        <a href="https://www.alcatel-lucent.com/solutions/cloudband" target="_blank"
+           title="Alcatel-Lucent Cloudband">Alcatel-Lucent Cloudband</a>
+        during a
+        <a href data-toggle="modal" data-target=".bs-example-modal-dialog">24 hours Hackathon session</a>.
+
+        For feedback / suggestions: <a
+            href="http://www.google.com/recaptcha/mailhide/d?k=01oEv-WCbjRcvjwi6IYnuxWQ==&amp;c=T_zEuodiHDnHFr7SCIDLdl1eZ5DmNKeclK_TNeCB2pg="
+            onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501oEv-WCbjRcvjwi6IYnuxWQ\75\75\46c\75T_zEuodiHDnHFr7SCIDLdl1eZ5DmNKeclK_TNeCB2pg\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;"
+            title="Reveal this e-mail address">Contact us</a>
+    </div>
+</div>
+<div class="modal fade bs-example-modal-dialog" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Alcatel Lucent Cloudband Python themed Hackathon session
+                    2015</h4>
+            </div>
+            <div class="modal-body">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active" id="imageItem1">
+
+                            <div class="carousel-caption">
+                                ...
+                            </div>
+                        </div>
+                        <div class="item" id="imageItem2">
+
+                            <div class="carousel-caption">
+                                ...
+                            </div>
+                        </div>
+                        <div class="item" id="imageItem3">
+
+                            <div class="carousel-caption">
+                                ...
+                            </div>
+                        </div>
+                        <div class="item" id="imageItem4">
+
+                            <div class="carousel-caption">
+                                ...
+                            </div>
+                        </div>
+                        <div class="item" id="imageItem5">
+
+                            <div class="carousel-caption">
+                                ...
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic" role="button"
+                       data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" role="button"
+                       data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

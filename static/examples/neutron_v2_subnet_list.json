@@ -1,0 +1,22 @@
+{"subnets": [
+    {
+        "name": "subnet18b0b2733Index0",
+        "enable_dhcp": true,
+        "network_id": "55a3c8b0-eb28-4915-9981-d7a1deb7b9ae",
+        "tenant_id": "c2edb9de95964f8ca45766d12e22ec44",
+        "dns_nameservers": [],
+        "gateway_ip": "1.1.1.10",
+        "ipv6_ra_mode": null,
+        "allocation_pools": [
+            {
+                "start": "1.1.1.11",
+                "end": "1.1.1.254"
+            }
+        ],
+        "host_routes": [],
+        "ip_version": 4,
+        "ipv6_address_mode": null,
+        "cidr": "1.1.1.0/24",
+        "id": "953b210b-9f0d-4b69-bf59-9c02096123cc"
+    }
+]}

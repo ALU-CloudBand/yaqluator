@@ -1,0 +1,177 @@
+{"access": {
+    "token": {
+        "issued_at": "2015-07-15T11:16:15.482149",
+        "expires": "2015-07-15T15:16:15Z",
+        "id": "{SHA1}a58ad6e2eabb1d8dfcce4f38641872a5c5318688",
+        "tenant": {
+            "enabled": true,
+            "description": "admin tenant",
+            "name": "admin",
+            "id": "c2edb9de95964f8ca45766d12e22ec44"
+        },
+        "audit_ids": ["5nxw5oQ3SbCUU5Lc88-now"]
+    },
+    "serviceCatalog": [
+        {
+            "endpoints_links": [],
+            "endpoints": [
+                {
+                    "adminURL": "http://10.48.3.5:8774/v2/c2edb9de95964f8ca45766d12e22ec44",
+                    "region": "RegionOne",
+                    "publicURL": "http://10.48.3.5:8774/v2/c2edb9de95964f8ca45766d12e22ec44",
+                    "internalURL": "http://10.1.20.5:8774/v2/c2edb9de95964f8ca45766d12e22ec44",
+                    "id": "24b47084a4f341c392da297b6debc874"
+                }
+            ],
+            "type": "compute",
+            "name": "nova"
+        },
+        {
+            "endpoints_links": [],
+            "endpoints": [
+                {
+                    "adminURL": "http://10.48.3.5:9696/",
+                    "region": "RegionOne",
+                    "publicURL": "http://10.48.3.5:9696/",
+                    "internalURL": "http://10.1.20.5:9696/",
+                    "id": "ccd692c60413411ca78991b1e7a85d14"
+                }
+            ],
+            "type": "network",
+            "name": "neutron"
+        },
+        {
+            "endpoints_links": [],
+            "endpoints": [
+                {
+                    "adminURL": "http://10.48.3.5:8776/v2/c2edb9de95964f8ca45766d12e22ec44",
+                    "region": "RegionOne",
+                    "publicURL": "http://10.48.3.5:8776/v2/c2edb9de95964f8ca45766d12e22ec44",
+                    "internalURL": "http://10.1.20.5:8776/v2/c2edb9de95964f8ca45766d12e22ec44",
+                    "id": "145ee065d38145b79d32c8eb1dc3faec"
+                }
+            ],
+            "type": "volumev2",
+            "name": "cinderv2"
+        },
+        {
+            "endpoints_links": [],
+            "endpoints": [
+                {
+                    "adminURL": "http://10.48.3.5:8774/v3",
+                    "region": "RegionOne",
+                    "publicURL": "http://10.48.3.5:8774/v3",
+                    "internalURL": "http://10.1.20.5:8774/v3",
+                    "id": "b91adebc70d341fa82c57f404e821e0c"
+                }
+            ],
+            "type": "computev3",
+            "name": "novav3"
+        },
+        {
+            "endpoints_links": [],
+            "endpoints": [
+                {
+                    "adminURL": "http://10.48.3.5:9292/v1",
+                    "region": "RegionOne",
+                    "publicURL": "http://10.48.3.5:9292/v1",
+                    "internalURL": "http://10.1.20.5:9292/v1",
+                    "id": "12c585280161437fb36dc8c5ec963dc5"
+                }
+            ],
+            "type": "image",
+            "name": "glance"
+        },
+        {
+            "endpoints_links": [],
+            "endpoints": [
+                {
+                    "adminURL": "http://10.48.3.5:8777",
+                    "region": "RegionOne",
+                    "publicURL": "http://10.48.3.5:8777",
+                    "internalURL": "http://10.1.20.5:8777",
+                    "id": "4914f3d408b346f5aeafe5d7febc14ea"
+                }
+            ],
+            "type": "metering",
+            "name": "ceilometer"
+        },
+        {
+            "endpoints_links": [],
+            "endpoints": [
+                {
+                    "adminURL": "http://10.48.3.5:8000/v1/",
+                    "region": "RegionOne",
+                    "publicURL": "http://10.48.3.5:8000/v1/",
+                    "internalURL": "http://10.1.20.5:8000/v1/",
+                    "id": "04578902790a422c8c1b32eaeb027d69"
+                }
+            ],
+            "type": "cloudformation",
+            "name": "heat-cfn"
+        },
+        {
+            "endpoints_links": [],
+            "endpoints": [
+                {
+                    "adminURL": "http://10.48.3.5:8776/v1/c2edb9de95964f8ca45766d12e22ec44",
+                    "region": "RegionOne",
+                    "publicURL": "http://10.48.3.5:8776/v1/c2edb9de95964f8ca45766d12e22ec44",
+                    "internalURL": "http://10.1.20.5:8776/v1/c2edb9de95964f8ca45766d12e22ec44",
+                    "id": "525ada8802fb41549b5cfdb49ac30a44"
+                }
+            ],
+            "type": "volume",
+            "name": "cinder"
+        },
+        {
+            "endpoints_links": [],
+            "endpoints": [
+                {
+                    "adminURL": "http://10.48.3.5:8004/v1/c2edb9de95964f8ca45766d12e22ec44",
+                    "region": "RegionOne",
+                    "publicURL": "http://10.48.3.5:8004/v1/c2edb9de95964f8ca45766d12e22ec44",
+                    "internalURL": "http://10.1.20.5:8004/v1/c2edb9de95964f8ca45766d12e22ec44",
+                    "id": "1dd2faa4071a4cc98efd08797ca4ad80"
+                }
+            ],
+            "type": "orchestration",
+            "name": "heat"
+        },
+        {
+            "endpoints_links": [],
+            "endpoints": [
+                {
+                    "adminURL": "http://10.48.3.5:35357/v2.0",
+                    "region": "RegionOne",
+                    "publicURL": "http://10.48.3.5:5000/v2.0",
+                    "internalURL": "http://10.1.20.5:35357/v2.0",
+                    "id": "0ec2d11057b34eb29f72e9d2f1f4d29a"
+                }
+            ],
+            "type": "identity",
+            "name": "keystone"
+        }
+    ],
+    "user": {
+        "username": "admin",
+        "roles_links": [],
+        "id": "39a70775aeaf4775bf844b47a92b60e7",
+        "roles": [
+            {
+                "name": "_member_"
+            },
+            {
+                "name": "admin"
+            },
+            {
+                "name": "heat_stack_owner"
+            }
+        ],
+        "name": "admin"
+    },
+    "metadata": {
+        "is_admin": 0,
+        "roles": ["9fe2ff9ee4384b1894a90878d3e92bab", "6e5ea61c34d34c149867d585be7b2200", "b553083b2a5544f0b048e730bb0f20da"]
+    }
+}}

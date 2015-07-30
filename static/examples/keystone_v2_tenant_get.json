@@ -1,0 +1,56 @@
+{"tenants_links": [], "tenants": [
+    {
+        "description": "FlavorsListWithDetailsNegativeTestJSON-516972973-desc",
+        "enabled": true,
+        "id": "18bbf1a895ac4d99b909671ca4a7d207",
+        "name": "FlavorsListWithDetailsNegativeTestJSON-516972973"
+    },
+    {
+        "description": "FlavorCreateNegativeTestJSON-1232833073-desc",
+        "enabled": true,
+        "id": "3d8b7d8124c746d4a5f66b840dfbecd8",
+        "name": "FlavorCreateNegativeTestJSON-1232833073"
+    },
+    {
+        "description": "Tenant for the openstack services",
+        "enabled": true,
+        "id": "53cab5fa8d0d4278950a7ff428ddfaf3",
+        "name": "services"
+    },
+    {
+        "description": "Tenant for Tempest demo user",
+        "enabled": true,
+        "id": "65abd4bb20914207b3b348557abab105",
+        "name": "demo"
+    },
+    {
+        "description": "FlavorCreateNegativeTestJSON-742008052-desc",
+        "enabled": true,
+        "id": "6abb017a2aca4bf4a28297b16b7f855e",
+        "name": "FlavorCreateNegativeTestJSON-742008052"
+    },
+    {
+        "description": "Tenant for Tempest alt_demo user",
+        "enabled": true,
+        "id": "947ce49587464bb1a6dc4563798a92f9",
+        "name": "alt_demo"
+    },
+    {
+        "description": "FlavorDetailsNegativeTestJSON-570345157-desc",
+        "enabled": true,
+        "id": "9a51be4ac39247b0887ed33432f4feb9",
+        "name": "FlavorDetailsNegativeTestJSON-570345157"
+    },
+    {
+        "description": "GetConsoleOutputNegativeTestJSON-963606750-desc",
+        "enabled": true,
+        "id": "c17888157c3140eeba54af18a1d383ff",
+        "name": "GetConsoleOutputNegativeTestJSON-963606750"
+    },
+    {
+        "description": "admin tenant",
+        "enabled": true,
+        "id": "c2edb9de95964f8ca45766d12e22ec44",
+        "name": "admin"
+    }
+]}

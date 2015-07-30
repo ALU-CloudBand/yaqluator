@@ -1,0 +1,70 @@
+{"server": {
+    "OS-EXT-STS:task_state": null,
+    "addresses": {
+        "net1dfd740c6Index0": [
+            {
+                "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:2c:4d:c2",
+                "version": 4,
+                "addr": "1.1.1.11",
+                "OS-EXT-IPS:type": "fixed"
+            }
+        ]
+    },
+    "links": [
+        {
+            "href": "http://10.48.3.5:8774/v2/c2edb9de95964f8ca45766d12e22ec44/servers/edc05b07-160a-4d97-b902-e6907c209d59",
+            "rel": "self"
+        },
+        {
+            "href": "http://10.48.3.5:8774/c2edb9de95964f8ca45766d12e22ec44/servers/edc05b07-160a-4d97-b902-e6907c209d59",
+            "rel": "bookmark"
+        }
+    ],
+    "image": {
+        "id": "947fb8af-7c14-4c28-b0d2-67e96319429d",
+        "links": [
+            {
+                "href": "http://10.48.3.5:8774/c2edb9de95964f8ca45766d12e22ec44/images/947fb8af-7c14-4c28-b0d2-67e96319429d",
+                "rel": "bookmark"
+            }
+        ]
+    },
+    "OS-EXT-STS:vm_state": "active",
+    "OS-EXT-SRV-ATTR:instance_name": "instance-0000009a",
+    "OS-SRV-USG:launched_at": "2015-07-15T01:02:15.000000",
+    "flavor": {
+        "id": "fe126173-f91e-4e2e-a51f-9482742ac86e",
+        "links": [
+            {
+                "href": "http://10.48.3.5:8774/c2edb9de95964f8ca45766d12e22ec44/flavors/fe126173-f91e-4e2e-a51f-9482742ac86e",
+                "rel": "bookmark"
+            }
+        ]
+    },
+    "id": "edc05b07-160a-4d97-b902-e6907c209d59",
+    "security_groups": [
+        {
+            "name": "default"
+        }
+    ],
+    "user_id": "39a70775aeaf4775bf844b47a92b60e7",
+    "OS-DCF:diskConfig": "MANUAL",
+    "accessIPv4": "",
+    "accessIPv6": "",
+    "progress": 0,
+    "OS-EXT-STS:power_state": 1,
+    "OS-EXT-AZ:availability_zone": "zone0",
+    "config_drive": "",
+    "status": "ACTIVE",
+    "updated": "2015-07-15T01:02:15Z",
+    "hostId": "0c9b32f98b42ff64c96f101c60a9794cc3558db86c8eb63341c44b4c",
+    "OS-EXT-SRV-ATTR:host": "compute-0-1.local",
+    "OS-SRV-USG:terminated_at": null,
+    "key_name": null,
+    "OS-EXT-SRV-ATTR:hypervisor_hostname": "compute-0-1.local",
+    "name": "server1",
+    "created": "2015-07-15T01:02:06Z",
+    "tenant_id": "c2edb9de95964f8ca45766d12e22ec44",
+    "os-extended-volumes:volumes_attached": [],
+    "metadata": {}
+}}

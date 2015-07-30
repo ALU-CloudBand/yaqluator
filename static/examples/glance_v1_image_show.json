@@ -1,0 +1,22 @@
+{"images": [
+    {
+        "status": "active",
+        "deleted_at": null,
+        "name": "redhat7-v2",
+        "deleted": false,
+        "container_format": "bare",
+        "created_at": "2015-07-14T23:40:04",
+        "disk_format": "qcow2",
+        "updated_at": "2015-07-14T23:40:38",
+        "min_disk": 0,
+        "protected": true,
+        "id": "9794f9c9-7e0c-4cbc-9b78-2caa3bf795f6",
+        "min_ram": 0,
+        "checksum": "b5fb73a378e7a5ce9c9ab921786d32f2",
+        "owner": "c2edb9de95964f8ca45766d12e22ec44",
+        "is_public": true,
+        "virtual_size": null,
+        "properties": {},
+        "size": 499908608
+    }
+]}
