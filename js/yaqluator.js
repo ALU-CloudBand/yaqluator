@@ -197,7 +197,7 @@ function handleFiles() {
     var reader = new FileReader();
     reader.readAsText(file, "UTF-8");
     reader.onload = function (evt) {
-        $yamlInput.html(evt.target.result);
+        $yamlInput.val(evt.target.result);
         //setYaml(evt.target.result);
     };
     reader.onerror = function (evt) {
