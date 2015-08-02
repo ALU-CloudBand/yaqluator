@@ -1,5 +1,4 @@
-#!/usr/local/bin/python2.7
-# TODO
+#!/usr/bin/python
 
 
 from wsgiref.handlers import CGIHandler
