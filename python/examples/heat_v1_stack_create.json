@@ -1,0 +1,11 @@
+{
+  "stack":{
+    "id":"5937c705-7042-400c-ad5e-66cf68f49a92",
+    "links":[
+      {
+        "href":"http://135.248.18.192:8004/v1/ec0dc23839a446f29f0926fcb0929416/stacks/my_stack_noa/5937c705-7042-400c-ad5e-66cf68f49a92",
+        "rel":"self"
+      }
+    ]
+  }
+}
