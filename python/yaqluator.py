@@ -7,11 +7,11 @@ import yaml
 
 
 def list_examples():
-    files = os.listdir("static/examples")
+    files = os.listdir("examples")
     return [filename.replace('.json', '') for filename in files]
 
 def get_example(example_name):
-    with open("static/examples/"+example_name+".json", "r") as file:
+    with open("examples/"+example_name+".json", "r") as file:
         return json.load(file)
 
 
