@@ -13,13 +13,26 @@ var apiListExample = "/examples/";
 var apiEvaluate = "/evaluate/";
 var apiExampleName = "/examples/";
 var autoComplete = apiServerString + "/autoComplete/";
-var list = "";
 var evalReqObj = {
     "yaml": "",
     "yaql_expression": ""
 };
 
 //methods
+/**
+ * @param args [hitType, eventCategory, eventAction, eventLabel, eventValue]
+ */
+function ga_send(args) {
+    if (typeof ga == 'function') {
+        ga.apply(window, args);
+    }
+}
+
+function contactUs() {
+    ga_send(['event', 'contact-us', 'contact-us-email']);
+    window.open('http://www.google.com/recaptcha/mailhide/d?k\07501oEv-WCbjRcvjwi6IYnuxWQ\75\75\46c\75T_zEuodiHDnHFr7SCIDLdl1eZ5DmNKeclK_TNeCB2pg\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300');
+}
+
 function initDropdown() {
     var url = apiServerString + apiListExample;
     $.ajax({
@@ -142,6 +155,8 @@ function evaluate(obj) {
             console.error(status);
         }
     });
+
+    ga_send(['event', 'evaluate', 'evaluate-yaql', $yaqlInput.val()]);
 }
 
 function initYaqlInput() {
@@ -203,6 +218,7 @@ function handleFiles() {
     reader.onerror = function (evt) {
         $yamlAlert.html("error reading file");
     };
+    ga_send(['event', 'yaml-input', 'browse-file']);
 }
 
 function initAboutImage(itemId, url) {
@@ -258,6 +274,8 @@ $(function () {
                 $yamlInput.prop('readonly', false);
             }
         });
+
+        ga_send(['event', 'yaml-input', 'example-select', exampleName]);
     });
 
 
