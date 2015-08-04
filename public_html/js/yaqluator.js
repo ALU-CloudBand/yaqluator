@@ -24,6 +24,7 @@ var evalReqObj = {
  */
 function ga_send(args) {
     if (typeof ga == 'function') {
+        args.splice(0, 0, 'send');
         ga.apply(window, args);
     }
 }
