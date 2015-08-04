@@ -1,6 +1,184 @@
-{"subnets": [
+{
+  "networks": [
     {
-        "cidr": "1.1.1.0/24",
-        "id": "953b210b-9f0d-4b69-bf59-9c02096123cc"
+      "status": "ACTIVE",
+      "subnets": [
+        "4c2a54d1-d8a4-4eab-b871-826a665319ee"
+      ],
+      "name": "ROUTABLE_NETWORK_IPV4",
+      "provider:physical_network": "RegionOne",
+      "admin_state_up": true,
+      "tenant_id": "99fb319bedc2468da93bdfb5f4ca419f",
+      "provider:network_type": "vlan",
+      "router:external": false,
+      "shared": false,
+      "id": "02c0559c-6a9f-4e93-bc96-405efcfc041e",
+      "provider:segmentation_id": 100
+    },
+    {
+      "status": "ACTIVE",
+      "subnets": [
+        "a8abeab7-bbbc-4a9b-bde8-cea15b383a72"
+      ],
+      "name": "CUSTOMER_NET_A_0_IPV4",
+      "provider:physical_network": "RegionOne",
+      "admin_state_up": true,
+      "tenant_id": "99fb319bedc2468da93bdfb5f4ca419f",
+      "provider:network_type": "vlan",
+      "router:external": false,
+      "shared": false,
+      "id": "1d2d045c-01e5-46f4-a7d0-e06e5981b3ef",
+      "provider:segmentation_id": 1001
+    },
+    {
+      "status": "ACTIVE",
+      "subnets": [
+        "3a3e3145-f214-4651-b274-879546bcf323"
+      ],
+      "name": "CUSTOMER_NET_B_0_IPV4",
+      "provider:physical_network": "RegionOne",
+      "admin_state_up": true,
+      "tenant_id": "99fb319bedc2468da93bdfb5f4ca419f",
+      "provider:network_type": "vlan",
+      "router:external": false,
+      "shared": false,
+      "id": "62e0f9b7-a1db-4252-9c32-0a92f84af91e",
+      "provider:segmentation_id": 1002
+    },
+    {
+      "status": "ACTIVE",
+      "subnets": [
+        "f1dd031b-fb2f-4e47-878c-e41b854c6f14"
+      ],
+      "name": "net_AA03C",
+      "provider:physical_network": "RegionOne",
+      "admin_state_up": true,
+      "tenant_id": "99fb319bedc2468da93bdfb5f4ca419f",
+      "provider:network_type": "vlan",
+      "router:external": false,
+      "shared": false,
+      "id": "733bf4e5-4b93-4c4d-a518-211807685c76",
+      "provider:segmentation_id": 3
+    },
+    {
+      "status": "ACTIVE",
+      "subnets": [
+        "a361eadc-a8d4-41df-86a2-6f434a000e91"
+      ],
+      "name": "net_1035F",
+      "provider:physical_network": "RegionOne",
+      "admin_state_up": true,
+      "tenant_id": "99fb319bedc2468da93bdfb5f4ca419f",
+      "provider:network_type": "vlan",
+      "router:external": false,
+      "shared": false,
+      "id": "90cc5795-802b-4820-87a6-a4c6c9553f84",
+      "provider:segmentation_id": 5
+    },
+    {
+      "status": "ACTIVE",
+      "subnets": [
+        "7cf708df-b555-48fe-94d1-2de6a15d773d"
+      ],
+      "name": "CUSTOMER_NET_D_0_IPV6",
+      "provider:physical_network": "RegionOne",
+      "admin_state_up": true,
+      "tenant_id": "99fb319bedc2468da93bdfb5f4ca419f",
+      "provider:network_type": "vlan",
+      "router:external": false,
+      "shared": false,
+      "id": "9447c7f0-37a1-4b71-9402-e447b50ffa3d",
+      "provider:segmentation_id": 1004
+    },
+    {
+      "status": "ACTIVE",
+      "subnets": [
+        "afe6d056-f1dd-44ca-ada1-1aca28d11ab1"
+      ],
+      "name": "FE_MANAGEMENT_0",
+      "provider:physical_network": "RegionOne",
+      "admin_state_up": true,
+      "tenant_id": "bab80bf8556849f19800a76dd30af734",
+      "provider:network_type": "vlan",
+      "router:external": false,
+      "shared": false,
+      "id": "962d0110-c57b-4a09-b5c9-517a730de0f4",
+      "provider:segmentation_id": 101
+    },
+    {
+      "status": "ACTIVE",
+      "subnets": [
+        "30bcaf5c-e113-45d8-b2dd-6441b4bb373a"
+      ],
+      "name": "BE_MANAGEMENT_0",
+      "provider:physical_network": "RegionOne",
+      "admin_state_up": true,
+      "tenant_id": "bab80bf8556849f19800a76dd30af734",
+      "provider:network_type": "vlan",
+      "router:external": false,
+      "shared": false,
+      "id": "aee00ae4-2a45-4691-8800-cbe4cb8f5ced",
+      "provider:segmentation_id": 200
+    },
+    {
+      "status": "ACTIVE",
+      "subnets": [
+        "541b20e9-61c6-4712-abe3-546c055aaa89"
+      ],
+      "name": "CUSTOMER_NET_C_0_IPV4",
+      "provider:physical_network": "RegionOne",
+      "admin_state_up": true,
+      "tenant_id": "99fb319bedc2468da93bdfb5f4ca419f",
+      "provider:network_type": "vlan",
+      "router:external": false,
+      "shared": false,
+      "id": "d92acc7c-944f-42f8-97ef-5279843dbbc7",
+      "provider:segmentation_id": 1003
+    },
+    {
+      "status": "ACTIVE",
+      "subnets": [
+        "6e8650c1-4ffb-44f0-bdac-e66df29948a0"
+      ],
+      "name": "net_E9C9A",
+      "provider:physical_network": "RegionOne",
+      "admin_state_up": true,
+      "tenant_id": "99fb319bedc2468da93bdfb5f4ca419f",
+      "provider:network_type": "vlan",
+      "router:external": false,
+      "shared": false,
+      "id": "e9cffe58-1af2-4b95-9447-23c8a1ce9d84",
+      "provider:segmentation_id": 4
+    },
+    {
+      "status": "ACTIVE",
+      "subnets": [
+        "b787c26f-a705-4516-a426-aff3faa33afe"
+      ],
+      "name": "PUBLIC_NETWORK",
+      "provider:physical_network": "RegionOne",
+      "admin_state_up": true,
+      "tenant_id": "99fb319bedc2468da93bdfb5f4ca419f",
+      "provider:network_type": "vlan",
+      "router:external": false,
+      "shared": false,
+      "id": "f07f4909-d7a7-4dff-8591-69bbc8664ac9",
+      "provider:segmentation_id": 226
+    },
+    {
+      "status": "ACTIVE",
+      "subnets": [
+        "b96de5bb-4dfe-40bc-bb69-5f38b77c0acf"
+      ],
+      "name": "net_D3D94",
+      "provider:physical_network": "RegionOne",
+      "admin_state_up": true,
+      "tenant_id": "99fb319bedc2468da93bdfb5f4ca419f",
+      "provider:network_type": "vlan",
+      "router:external": false,
+      "shared": false,
+      "id": "fbeeef3b-2199-46fc-bb40-33a036301a02",
+      "provider:segmentation_id": 2
     }
-]}
+  ]
+}

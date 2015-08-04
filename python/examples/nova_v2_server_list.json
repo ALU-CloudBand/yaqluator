@@ -1,177 +1,552 @@
-{"access": {
-    "token": {
-        "issued_at": "2015-07-15T11:16:15.482149",
-        "expires": "2015-07-15T15:16:15Z",
-        "id": "{SHA1}a58ad6e2eabb1d8dfcce4f38641872a5c5318688",
-        "tenant": {
-            "enabled": true,
-            "description": "admin tenant",
-            "name": "admin",
-            "id": "c2edb9de95964f8ca45766d12e22ec44"
-        },
-        "audit_ids": ["5nxw5oQ3SbCUU5Lc88-now"]
-    },
-    "serviceCatalog": [
+{
+  "servers": [
+    {
+      "OS-EXT-STS:task_state": null,
+      "addresses": {
+        "net_1035F": [
+          {
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:fc:4c:50",
+            "version": 4,
+            "addr": "10.0.0.104",
+            "OS-EXT-IPS:type": "fixed"
+          }
+        ]
+      },
+      "links": [
         {
-            "endpoints_links": [],
-            "endpoints": [
-                {
-                    "adminURL": "http://10.48.3.5:8774/v2/c2edb9de95964f8ca45766d12e22ec44",
-                    "region": "RegionOne",
-                    "publicURL": "http://10.48.3.5:8774/v2/c2edb9de95964f8ca45766d12e22ec44",
-                    "internalURL": "http://10.1.20.5:8774/v2/c2edb9de95964f8ca45766d12e22ec44",
-                    "id": "24b47084a4f341c392da297b6debc874"
-                }
-            ],
-            "type": "compute",
-            "name": "nova"
+          "href": "http://10.20.60.5:8774/v2/bab80bf8556849f19800a76dd30af734/servers/d47e7e12-3f27-46f7-954e-8b0b7998c630",
+          "rel": "self"
         },
         {
-            "endpoints_links": [],
-            "endpoints": [
-                {
-                    "adminURL": "http://10.48.3.5:9696/",
-                    "region": "RegionOne",
-                    "publicURL": "http://10.48.3.5:9696/",
-                    "internalURL": "http://10.1.20.5:9696/",
-                    "id": "ccd692c60413411ca78991b1e7a85d14"
-                }
-            ],
-            "type": "network",
-            "name": "neutron"
-        },
-        {
-            "endpoints_links": [],
-            "endpoints": [
-                {
-                    "adminURL": "http://10.48.3.5:8776/v2/c2edb9de95964f8ca45766d12e22ec44",
-                    "region": "RegionOne",
-                    "publicURL": "http://10.48.3.5:8776/v2/c2edb9de95964f8ca45766d12e22ec44",
-                    "internalURL": "http://10.1.20.5:8776/v2/c2edb9de95964f8ca45766d12e22ec44",
-                    "id": "145ee065d38145b79d32c8eb1dc3faec"
-                }
-            ],
-            "type": "volumev2",
-            "name": "cinderv2"
-        },
-        {
-            "endpoints_links": [],
-            "endpoints": [
-                {
-                    "adminURL": "http://10.48.3.5:8774/v3",
-                    "region": "RegionOne",
-                    "publicURL": "http://10.48.3.5:8774/v3",
-                    "internalURL": "http://10.1.20.5:8774/v3",
-                    "id": "b91adebc70d341fa82c57f404e821e0c"
-                }
-            ],
-            "type": "computev3",
-            "name": "novav3"
-        },
-        {
-            "endpoints_links": [],
-            "endpoints": [
-                {
-                    "adminURL": "http://10.48.3.5:9292/v1",
-                    "region": "RegionOne",
-                    "publicURL": "http://10.48.3.5:9292/v1",
-                    "internalURL": "http://10.1.20.5:9292/v1",
-                    "id": "12c585280161437fb36dc8c5ec963dc5"
-                }
-            ],
-            "type": "image",
-            "name": "glance"
-        },
-        {
-            "endpoints_links": [],
-            "endpoints": [
-                {
-                    "adminURL": "http://10.48.3.5:8777",
-                    "region": "RegionOne",
-                    "publicURL": "http://10.48.3.5:8777",
-                    "internalURL": "http://10.1.20.5:8777",
-                    "id": "4914f3d408b346f5aeafe5d7febc14ea"
-                }
-            ],
-            "type": "metering",
-            "name": "ceilometer"
-        },
-        {
-            "endpoints_links": [],
-            "endpoints": [
-                {
-                    "adminURL": "http://10.48.3.5:8000/v1/",
-                    "region": "RegionOne",
-                    "publicURL": "http://10.48.3.5:8000/v1/",
-                    "internalURL": "http://10.1.20.5:8000/v1/",
-                    "id": "04578902790a422c8c1b32eaeb027d69"
-                }
-            ],
-            "type": "cloudformation",
-            "name": "heat-cfn"
-        },
-        {
-            "endpoints_links": [],
-            "endpoints": [
-                {
-                    "adminURL": "http://10.48.3.5:8776/v1/c2edb9de95964f8ca45766d12e22ec44",
-                    "region": "RegionOne",
-                    "publicURL": "http://10.48.3.5:8776/v1/c2edb9de95964f8ca45766d12e22ec44",
-                    "internalURL": "http://10.1.20.5:8776/v1/c2edb9de95964f8ca45766d12e22ec44",
-                    "id": "525ada8802fb41549b5cfdb49ac30a44"
-                }
-            ],
-            "type": "volume",
-            "name": "cinder"
-        },
-        {
-            "endpoints_links": [],
-            "endpoints": [
-                {
-                    "adminURL": "http://10.48.3.5:8004/v1/c2edb9de95964f8ca45766d12e22ec44",
-                    "region": "RegionOne",
-                    "publicURL": "http://10.48.3.5:8004/v1/c2edb9de95964f8ca45766d12e22ec44",
-                    "internalURL": "http://10.1.20.5:8004/v1/c2edb9de95964f8ca45766d12e22ec44",
-                    "id": "1dd2faa4071a4cc98efd08797ca4ad80"
-                }
-            ],
-            "type": "orchestration",
-            "name": "heat"
-        },
-        {
-            "endpoints_links": [],
-            "endpoints": [
-                {
-                    "adminURL": "http://10.48.3.5:35357/v2.0",
-                    "region": "RegionOne",
-                    "publicURL": "http://10.48.3.5:5000/v2.0",
-                    "internalURL": "http://10.1.20.5:35357/v2.0",
-                    "id": "0ec2d11057b34eb29f72e9d2f1f4d29a"
-                }
-            ],
-            "type": "identity",
-            "name": "keystone"
+          "href": "http://10.20.60.5:8774/bab80bf8556849f19800a76dd30af734/servers/d47e7e12-3f27-46f7-954e-8b0b7998c630",
+          "rel": "bookmark"
         }
-    ],
-    "user": {
-        "username": "admin",
-        "roles_links": [],
-        "id": "39a70775aeaf4775bf844b47a92b60e7",
-        "roles": [
-            {
-                "name": "_member_"
-            },
-            {
-                "name": "admin"
-            },
-            {
-                "name": "heat_stack_owner"
-            }
-        ],
-        "name": "admin"
+      ],
+      "image": {
+        "id": "fa85185f-5142-4a48-bf3e-da2483df3c52",
+        "links": [
+          {
+            "href": "http://10.20.60.5:8774/bab80bf8556849f19800a76dd30af734/images/fa85185f-5142-4a48-bf3e-da2483df3c52",
+            "rel": "bookmark"
+          }
+        ]
+      },
+      "OS-EXT-STS:vm_state": "active",
+      "OS-EXT-SRV-ATTR:instance_name": "instance-000000fb",
+      "OS-SRV-USG:launched_at": "2015-08-04T14:14:13.000000",
+      "flavor": {
+        "id": "6be82499-3f25-474a-b641-91052f5478a1",
+        "links": [
+          {
+            "href": "http://10.20.60.5:8774/bab80bf8556849f19800a76dd30af734/flavors/6be82499-3f25-474a-b641-91052f5478a1",
+            "rel": "bookmark"
+          }
+        ]
+      },
+      "id": "d47e7e12-3f27-46f7-954e-8b0b7998c630",
+      "security_groups": [
+        {
+          "name": "default"
+        }
+      ],
+      "user_id": "14012add101a4c47b3652e5a1e79344e",
+      "OS-DCF:diskConfig": "MANUAL",
+      "accessIPv4": "",
+      "accessIPv6": "",
+      "progress": 0,
+      "OS-EXT-STS:power_state": 1,
+      "OS-EXT-AZ:availability_zone": "zone0",
+      "config_drive": "",
+      "status": "ACTIVE",
+      "updated": "2015-08-04T14:14:13Z",
+      "hostId": "6f8ac911f78fc1449502457c60bb9d2e7a29ac35d41576c58aa472ca",
+      "OS-EXT-SRV-ATTR:host": "compute-0-0.local",
+      "OS-SRV-USG:terminated_at": null,
+      "key_name": null,
+      "OS-EXT-SRV-ATTR:hypervisor_hostname": "compute-0-0.local",
+      "name": "AU-jje-q7hwhlzd3v3n-emhjrjsbgas5-server1-q2tggblozdlw",
+      "created": "2015-08-04T14:14:00Z",
+      "tenant_id": "99fb319bedc2468da93bdfb5f4ca419f",
+      "os-extended-volumes:volumes_attached": [],
+      "metadata": {
+        "metering.stack": "f8c7f142-d1eb-44a4-8f75-da811a380375"
+      }
     },
-    "metadata": {
-        "is_admin": 0,
-        "roles": ["9fe2ff9ee4384b1894a90878d3e92bab", "6e5ea61c34d34c149867d585be7b2200", "b553083b2a5544f0b048e730bb0f20da"]
+    {
+      "OS-EXT-STS:task_state": null,
+      "addresses": {
+        "net_1035F": [
+          {
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:72:76:b3",
+            "version": 4,
+            "addr": "10.0.0.103",
+            "OS-EXT-IPS:type": "fixed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "http://10.20.60.5:8774/v2/bab80bf8556849f19800a76dd30af734/servers/6021d136-7fbd-4e5b-864b-decd86394120",
+          "rel": "self"
+        },
+        {
+          "href": "http://10.20.60.5:8774/bab80bf8556849f19800a76dd30af734/servers/6021d136-7fbd-4e5b-864b-decd86394120",
+          "rel": "bookmark"
+        }
+      ],
+      "image": {
+        "id": "fa85185f-5142-4a48-bf3e-da2483df3c52",
+        "links": [
+          {
+            "href": "http://10.20.60.5:8774/bab80bf8556849f19800a76dd30af734/images/fa85185f-5142-4a48-bf3e-da2483df3c52",
+            "rel": "bookmark"
+          }
+        ]
+      },
+      "OS-EXT-STS:vm_state": "active",
+      "OS-EXT-SRV-ATTR:instance_name": "instance-000000fa",
+      "OS-SRV-USG:launched_at": "2015-08-04T14:14:11.000000",
+      "flavor": {
+        "id": "6be82499-3f25-474a-b641-91052f5478a1",
+        "links": [
+          {
+            "href": "http://10.20.60.5:8774/bab80bf8556849f19800a76dd30af734/flavors/6be82499-3f25-474a-b641-91052f5478a1",
+            "rel": "bookmark"
+          }
+        ]
+      },
+      "id": "6021d136-7fbd-4e5b-864b-decd86394120",
+      "security_groups": [
+        {
+          "name": "default"
+        }
+      ],
+      "user_id": "14012add101a4c47b3652e5a1e79344e",
+      "OS-DCF:diskConfig": "MANUAL",
+      "accessIPv4": "",
+      "accessIPv6": "",
+      "progress": 0,
+      "OS-EXT-STS:power_state": 1,
+      "OS-EXT-AZ:availability_zone": "zone1",
+      "config_drive": "",
+      "status": "ACTIVE",
+      "updated": "2015-08-04T14:14:11Z",
+      "hostId": "8c8f1cd89a977086beb90006968a7591caca8bc61508d1f6daedc1d8",
+      "OS-EXT-SRV-ATTR:host": "compute-0-1.local",
+      "OS-SRV-USG:terminated_at": null,
+      "key_name": null,
+      "OS-EXT-SRV-ATTR:hypervisor_hostname": "compute-0-1.local",
+      "name": "AU-jje-jkhxbnghicif-ktivczhtn5bn-server1-kotp3opnxqqw",
+      "created": "2015-08-04T14:13:59Z",
+      "tenant_id": "99fb319bedc2468da93bdfb5f4ca419f",
+      "os-extended-volumes:volumes_attached": [],
+      "metadata": {
+        "metering.stack": "f8c7f142-d1eb-44a4-8f75-da811a380375"
+      }
+    },
+    {
+      "OS-EXT-STS:task_state": null,
+      "addresses": {},
+      "links": [
+        {
+          "href": "http://10.20.60.5:8774/v2/bab80bf8556849f19800a76dd30af734/servers/fdf63999-c258-4e6f-8830-5b6f666c6fe5",
+          "rel": "self"
+        },
+        {
+          "href": "http://10.20.60.5:8774/bab80bf8556849f19800a76dd30af734/servers/fdf63999-c258-4e6f-8830-5b6f666c6fe5",
+          "rel": "bookmark"
+        }
+      ],
+      "image": {
+        "id": "fa85185f-5142-4a48-bf3e-da2483df3c52",
+        "links": [
+          {
+            "href": "http://10.20.60.5:8774/bab80bf8556849f19800a76dd30af734/images/fa85185f-5142-4a48-bf3e-da2483df3c52",
+            "rel": "bookmark"
+          }
+        ]
+      },
+      "OS-EXT-STS:vm_state": "active",
+      "OS-EXT-SRV-ATTR:instance_name": "instance-000000f9",
+      "OS-SRV-USG:launched_at": "2015-08-04T14:12:56.000000",
+      "flavor": {
+        "id": "6be82499-3f25-474a-b641-91052f5478a1",
+        "links": [
+          {
+            "href": "http://10.20.60.5:8774/bab80bf8556849f19800a76dd30af734/flavors/6be82499-3f25-474a-b641-91052f5478a1",
+            "rel": "bookmark"
+          }
+        ]
+      },
+      "id": "fdf63999-c258-4e6f-8830-5b6f666c6fe5",
+      "user_id": "14012add101a4c47b3652e5a1e79344e",
+      "OS-DCF:diskConfig": "MANUAL",
+      "accessIPv4": "",
+      "accessIPv6": "",
+      "progress": 0,
+      "OS-EXT-STS:power_state": 1,
+      "OS-EXT-AZ:availability_zone": "zone1",
+      "config_drive": "",
+      "status": "ACTIVE",
+      "updated": "2015-08-04T14:12:56Z",
+      "hostId": "8c8f1cd89a977086beb90006968a7591caca8bc61508d1f6daedc1d8",
+      "OS-EXT-SRV-ATTR:host": "compute-0-1.local",
+      "OS-SRV-USG:terminated_at": null,
+      "key_name": null,
+      "OS-EXT-SRV-ATTR:hypervisor_hostname": "compute-0-1.local",
+      "name": "AU-jje-hrnap7oy445w-jxs72kdtgd3i-server1-ueln3lvinipx",
+      "created": "2015-08-04T14:12:45Z",
+      "tenant_id": "99fb319bedc2468da93bdfb5f4ca419f",
+      "os-extended-volumes:volumes_attached": [],
+      "metadata": {
+        "metering.stack": "f8c7f142-d1eb-44a4-8f75-da811a380375"
+      }
+    },
+    {
+      "OS-EXT-STS:task_state": null,
+      "addresses": {
+        "net_E9C9A": [
+          {
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:61:ed:76",
+            "version": 4,
+            "addr": "10.0.0.103",
+            "OS-EXT-IPS:type": "fixed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "http://10.20.60.5:8774/v2/bab80bf8556849f19800a76dd30af734/servers/df84fe0e-bb2c-4ac7-a535-9b82ad1d67c3",
+          "rel": "self"
+        },
+        {
+          "href": "http://10.20.60.5:8774/bab80bf8556849f19800a76dd30af734/servers/df84fe0e-bb2c-4ac7-a535-9b82ad1d67c3",
+          "rel": "bookmark"
+        }
+      ],
+      "image": {
+        "id": "fa85185f-5142-4a48-bf3e-da2483df3c52",
+        "links": [
+          {
+            "href": "http://10.20.60.5:8774/bab80bf8556849f19800a76dd30af734/images/fa85185f-5142-4a48-bf3e-da2483df3c52",
+            "rel": "bookmark"
+          }
+        ]
+      },
+      "OS-EXT-STS:vm_state": "active",
+      "OS-EXT-SRV-ATTR:instance_name": "instance-000000f6",
+      "OS-SRV-USG:launched_at": "2015-08-04T13:36:32.000000",
+      "flavor": {
+        "id": "6be82499-3f25-474a-b641-91052f5478a1",
+        "links": [
+          {
+            "href": "http://10.20.60.5:8774/bab80bf8556849f19800a76dd30af734/flavors/6be82499-3f25-474a-b641-91052f5478a1",
+            "rel": "bookmark"
+          }
+        ]
+      },
+      "id": "df84fe0e-bb2c-4ac7-a535-9b82ad1d67c3",
+      "security_groups": [
+        {
+          "name": "default"
+        }
+      ],
+      "user_id": "14012add101a4c47b3652e5a1e79344e",
+      "OS-DCF:diskConfig": "MANUAL",
+      "accessIPv4": "",
+      "accessIPv6": "",
+      "progress": 0,
+      "OS-EXT-STS:power_state": 1,
+      "OS-EXT-AZ:availability_zone": "zone0",
+      "config_drive": "",
+      "status": "ACTIVE",
+      "updated": "2015-08-04T13:36:32Z",
+      "hostId": "6f8ac911f78fc1449502457c60bb9d2e7a29ac35d41576c58aa472ca",
+      "OS-EXT-SRV-ATTR:host": "compute-0-0.local",
+      "OS-SRV-USG:terminated_at": null,
+      "key_name": null,
+      "OS-EXT-SRV-ATTR:hypervisor_hostname": "compute-0-0.local",
+      "name": "AU-6ou-llhwk4snozvl-frxhoclzzivn-server1-nparnypwxfpw",
+      "created": "2015-08-04T13:36:17Z",
+      "tenant_id": "99fb319bedc2468da93bdfb5f4ca419f",
+      "os-extended-volumes:volumes_attached": [],
+      "metadata": {
+        "metering.stack": "818e9f8e-cd23-4b32-8d8b-57beb14dca9f"
+      }
+    },
+    {
+      "OS-EXT-STS:task_state": null,
+      "addresses": {
+        "net_E9C9A": [
+          {
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:dc:85:50",
+            "version": 4,
+            "addr": "10.0.0.104",
+            "OS-EXT-IPS:type": "fixed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "http://10.20.60.5:8774/v2/bab80bf8556849f19800a76dd30af734/servers/ebfcc67b-6d5d-4737-927c-3a0fd0fb037f",
+          "rel": "self"
+        },
+        {
+          "href": "http://10.20.60.5:8774/bab80bf8556849f19800a76dd30af734/servers/ebfcc67b-6d5d-4737-927c-3a0fd0fb037f",
+          "rel": "bookmark"
+        }
+      ],
+      "image": {
+        "id": "fa85185f-5142-4a48-bf3e-da2483df3c52",
+        "links": [
+          {
+            "href": "http://10.20.60.5:8774/bab80bf8556849f19800a76dd30af734/images/fa85185f-5142-4a48-bf3e-da2483df3c52",
+            "rel": "bookmark"
+          }
+        ]
+      },
+      "OS-EXT-STS:vm_state": "active",
+      "OS-EXT-SRV-ATTR:instance_name": "instance-000000f5",
+      "OS-SRV-USG:launched_at": "2015-08-04T13:36:32.000000",
+      "flavor": {
+        "id": "6be82499-3f25-474a-b641-91052f5478a1",
+        "links": [
+          {
+            "href": "http://10.20.60.5:8774/bab80bf8556849f19800a76dd30af734/flavors/6be82499-3f25-474a-b641-91052f5478a1",
+            "rel": "bookmark"
+          }
+        ]
+      },
+      "id": "ebfcc67b-6d5d-4737-927c-3a0fd0fb037f",
+      "security_groups": [
+        {
+          "name": "default"
+        }
+      ],
+      "user_id": "14012add101a4c47b3652e5a1e79344e",
+      "OS-DCF:diskConfig": "MANUAL",
+      "accessIPv4": "",
+      "accessIPv6": "",
+      "progress": 0,
+      "OS-EXT-STS:power_state": 1,
+      "OS-EXT-AZ:availability_zone": "zone0",
+      "config_drive": "",
+      "status": "ACTIVE",
+      "updated": "2015-08-04T13:36:32Z",
+      "hostId": "6f8ac911f78fc1449502457c60bb9d2e7a29ac35d41576c58aa472ca",
+      "OS-EXT-SRV-ATTR:host": "compute-0-0.local",
+      "OS-SRV-USG:terminated_at": null,
+      "key_name": null,
+      "OS-EXT-SRV-ATTR:hypervisor_hostname": "compute-0-0.local",
+      "name": "AU-6ou-4xigrdaw3pwd-t5uxuxvjmbyk-server1-72dy3hzqjgc7",
+      "created": "2015-08-04T13:36:17Z",
+      "tenant_id": "99fb319bedc2468da93bdfb5f4ca419f",
+      "os-extended-volumes:volumes_attached": [],
+      "metadata": {
+        "metering.stack": "818e9f8e-cd23-4b32-8d8b-57beb14dca9f"
+      }
+    },
+    {
+      "OS-EXT-STS:task_state": null,
+      "addresses": {},
+      "links": [
+        {
+          "href": "http://10.20.60.5:8774/v2/bab80bf8556849f19800a76dd30af734/servers/ba566f24-74ba-4b1e-9983-7093bd10d222",
+          "rel": "self"
+        },
+        {
+          "href": "http://10.20.60.5:8774/bab80bf8556849f19800a76dd30af734/servers/ba566f24-74ba-4b1e-9983-7093bd10d222",
+          "rel": "bookmark"
+        }
+      ],
+      "image": {
+        "id": "fa85185f-5142-4a48-bf3e-da2483df3c52",
+        "links": [
+          {
+            "href": "http://10.20.60.5:8774/bab80bf8556849f19800a76dd30af734/images/fa85185f-5142-4a48-bf3e-da2483df3c52",
+            "rel": "bookmark"
+          }
+        ]
+      },
+      "OS-EXT-STS:vm_state": "active",
+      "OS-EXT-SRV-ATTR:instance_name": "instance-000000f4",
+      "OS-SRV-USG:launched_at": "2015-08-04T13:34:21.000000",
+      "flavor": {
+        "id": "6be82499-3f25-474a-b641-91052f5478a1",
+        "links": [
+          {
+            "href": "http://10.20.60.5:8774/bab80bf8556849f19800a76dd30af734/flavors/6be82499-3f25-474a-b641-91052f5478a1",
+            "rel": "bookmark"
+          }
+        ]
+      },
+      "id": "ba566f24-74ba-4b1e-9983-7093bd10d222",
+      "user_id": "14012add101a4c47b3652e5a1e79344e",
+      "OS-DCF:diskConfig": "MANUAL",
+      "accessIPv4": "",
+      "accessIPv6": "",
+      "progress": 0,
+      "OS-EXT-STS:power_state": 1,
+      "OS-EXT-AZ:availability_zone": "zone1",
+      "config_drive": "",
+      "status": "ACTIVE",
+      "updated": "2015-08-04T13:34:21Z",
+      "hostId": "8c8f1cd89a977086beb90006968a7591caca8bc61508d1f6daedc1d8",
+      "OS-EXT-SRV-ATTR:host": "compute-0-1.local",
+      "OS-SRV-USG:terminated_at": null,
+      "key_name": null,
+      "OS-EXT-SRV-ATTR:hypervisor_hostname": "compute-0-1.local",
+      "name": "AU-6ou-cnssrzxqwddx-xtsxew2fize3-server1-vo53xw3exb2i",
+      "created": "2015-08-04T13:34:08Z",
+      "tenant_id": "99fb319bedc2468da93bdfb5f4ca419f",
+      "os-extended-volumes:volumes_attached": [],
+      "metadata": {
+        "metering.stack": "818e9f8e-cd23-4b32-8d8b-57beb14dca9f"
+      }
+    },
+    {
+      "OS-EXT-STS:task_state": null,
+      "addresses": {
+        "net_AA03C": [
+          {
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:0f:30:be",
+            "version": 4,
+            "addr": "10.0.0.103",
+            "OS-EXT-IPS:type": "fixed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "http://10.20.60.5:8774/v2/bab80bf8556849f19800a76dd30af734/servers/510db4e5-4aeb-4480-aaed-b421c57ccce8",
+          "rel": "self"
+        },
+        {
+          "href": "http://10.20.60.5:8774/bab80bf8556849f19800a76dd30af734/servers/510db4e5-4aeb-4480-aaed-b421c57ccce8",
+          "rel": "bookmark"
+        }
+      ],
+      "image": {
+        "id": "fa85185f-5142-4a48-bf3e-da2483df3c52",
+        "links": [
+          {
+            "href": "http://10.20.60.5:8774/bab80bf8556849f19800a76dd30af734/images/fa85185f-5142-4a48-bf3e-da2483df3c52",
+            "rel": "bookmark"
+          }
+        ]
+      },
+      "OS-EXT-STS:vm_state": "active",
+      "OS-EXT-SRV-ATTR:instance_name": "instance-000000f2",
+      "OS-SRV-USG:launched_at": "2015-08-04T13:17:30.000000",
+      "flavor": {
+        "id": "6be82499-3f25-474a-b641-91052f5478a1",
+        "links": [
+          {
+            "href": "http://10.20.60.5:8774/bab80bf8556849f19800a76dd30af734/flavors/6be82499-3f25-474a-b641-91052f5478a1",
+            "rel": "bookmark"
+          }
+        ]
+      },
+      "id": "510db4e5-4aeb-4480-aaed-b421c57ccce8",
+      "security_groups": [
+        {
+          "name": "default"
+        }
+      ],
+      "user_id": "14012add101a4c47b3652e5a1e79344e",
+      "OS-DCF:diskConfig": "MANUAL",
+      "accessIPv4": "",
+      "accessIPv6": "",
+      "progress": 0,
+      "OS-EXT-STS:power_state": 1,
+      "OS-EXT-AZ:availability_zone": "zone1",
+      "config_drive": "",
+      "status": "ACTIVE",
+      "updated": "2015-08-04T13:17:30Z",
+      "hostId": "8c8f1cd89a977086beb90006968a7591caca8bc61508d1f6daedc1d8",
+      "OS-EXT-SRV-ATTR:host": "compute-0-1.local",
+      "OS-SRV-USG:terminated_at": null,
+      "key_name": null,
+      "OS-EXT-SRV-ATTR:hypervisor_hostname": "compute-0-1.local",
+      "name": "AU-gvb-o7gdzet5dzxi-vl46ai5i5c2w-server1-f5lrtzrd2ew7",
+      "created": "2015-08-04T13:17:18Z",
+      "tenant_id": "99fb319bedc2468da93bdfb5f4ca419f",
+      "os-extended-volumes:volumes_attached": [],
+      "metadata": {
+        "metering.stack": "df67d032-dd47-4b07-94a5-7f48663f55e6"
+      }
+    },
+    {
+      "OS-EXT-STS:task_state": null,
+      "addresses": {
+        "net_D3D94": [
+          {
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:f3:64:21",
+            "version": 4,
+            "addr": "10.0.0.104",
+            "OS-EXT-IPS:type": "fixed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "http://10.20.60.5:8774/v2/bab80bf8556849f19800a76dd30af734/servers/96bbea07-d532-4f09-9ec2-2a1ebbb3c750",
+          "rel": "self"
+        },
+        {
+          "href": "http://10.20.60.5:8774/bab80bf8556849f19800a76dd30af734/servers/96bbea07-d532-4f09-9ec2-2a1ebbb3c750",
+          "rel": "bookmark"
+        }
+      ],
+      "image": {
+        "id": "fa85185f-5142-4a48-bf3e-da2483df3c52",
+        "links": [
+          {
+            "href": "http://10.20.60.5:8774/bab80bf8556849f19800a76dd30af734/images/fa85185f-5142-4a48-bf3e-da2483df3c52",
+            "rel": "bookmark"
+          }
+        ]
+      },
+      "OS-EXT-STS:vm_state": "active",
+      "OS-EXT-SRV-ATTR:instance_name": "instance-000000d2",
+      "OS-SRV-USG:launched_at": "2015-08-04T06:39:31.000000",
+      "flavor": {
+        "id": "6be82499-3f25-474a-b641-91052f5478a1",
+        "links": [
+          {
+            "href": "http://10.20.60.5:8774/bab80bf8556849f19800a76dd30af734/flavors/6be82499-3f25-474a-b641-91052f5478a1",
+            "rel": "bookmark"
+          }
+        ]
+      },
+      "id": "96bbea07-d532-4f09-9ec2-2a1ebbb3c750",
+      "security_groups": [
+        {
+          "name": "default"
+        }
+      ],
+      "user_id": "14012add101a4c47b3652e5a1e79344e",
+      "OS-DCF:diskConfig": "MANUAL",
+      "accessIPv4": "",
+      "accessIPv6": "",
+      "progress": 0,
+      "OS-EXT-STS:power_state": 1,
+      "OS-EXT-AZ:availability_zone": "zone0",
+      "config_drive": "",
+      "status": "ACTIVE",
+      "updated": "2015-08-04T06:39:31Z",
+      "hostId": "6f8ac911f78fc1449502457c60bb9d2e7a29ac35d41576c58aa472ca",
+      "OS-EXT-SRV-ATTR:host": "compute-0-0.local",
+      "OS-SRV-USG:terminated_at": null,
+      "key_name": null,
+      "OS-EXT-SRV-ATTR:hypervisor_hostname": "compute-0-0.local",
+      "name": "AU-cyg-q3zzm4t6qxjw-ebybxt5pceul-server1-prcztr5iabmc",
+      "created": "2015-08-04T06:39:18Z",
+      "tenant_id": "99fb319bedc2468da93bdfb5f4ca419f",
+      "os-extended-volumes:volumes_attached": [],
+      "metadata": {
+        "metering.stack": "e2cf632b-9524-4ffa-b2d6-62c9bb1fedfd"
+      }
     }
-}}
+  ]
+}
