@@ -1,0 +1,121 @@
+{
+  "endpoints": [
+    {
+      "internalurl": "http://10.1.20.5:8004/v1/%(tenant_id)s",
+      "adminurl": "http://10.20.50.5:8004/v1/%(tenant_id)s",
+      "service_id": "3b241fd531fb40e8879e4522a5ac32c6",
+      "region": "RegionOne",
+      "enabled": true,
+      "id": "1dce44200dd0482498d0592542f60924",
+      "publicurl": "http://10.20.50.5:8004/v1/%(tenant_id)s"
+    },
+    {
+      "adminurl": "http://10.20.50.5:8776/v2/%(tenant_id)s",
+      "service_id": "e9d176794a9546cf9682b5a963a06a62",
+      "region": "RegionOne",
+      "publicurl": "http://10.20.50.5:8776/v2/%(tenant_id)s",
+      "enabled": true,
+      "id": "7d91d124e4bc4b07b9541217f98eb5d8",
+      "internalurl": "http://10.1.20.5:8776/v2/%(tenant_id)s"
+    },
+    {
+      "internalurl": "http:+//10.1.20.5:8989/v2",
+      "adminurl": "http://10.20.50.5:8989/v2",
+      "service_id": "74f36733efe541cb91fd1510b9ff7487",
+      "region": "RegionOne",
+      "enabled": true,
+      "id": "4af772b1886f4f2e82875f2687767313",
+      "publicurl": "http://10.20.50.5:8989/v2"
+    },
+    {
+      "internalurl": "http://10.1.20.5:8082/",
+      "adminurl": "http://10.20.50.5:8082/",
+      "service_id": "dd3e91a9a8bf4ddfaa96321b574bd8bf",
+      "region": "RegionOne",
+      "enabled": true,
+      "id": "df30eb711a7b42bc99ef3fd01a3a8f6b",
+      "publicurl": "http://10.20.50.5:8082/"
+    },
+    {
+      "adminurl": "http://10.20.50.5:8776/v1/%(tenant_id)s",
+      "service_id": "67a5bbb715954c4594110157d5997d27",
+      "region": "RegionOne",
+      "publicurl": "http://10.20.50.5:8776/v1/%(tenant_id)s",
+      "enabled": true,
+      "id": "0964557c7d5d4fe485265297e85600ba",
+      "internalurl": "http://10.1.20.5:8776/v1/%(tenant_id)s"
+    },
+    {
+      "adminurl": "http://10.20.50.5:9696",
+      "service_id": "8ddce7a5e7b149f78c38c6ca4a15dfc5",
+      "region": "RegionOne",
+      "publicurl": "http://10.20.50.5:9696",
+      "enabled": true,
+      "id": "4949e35d99f04c6688a521b451ca2ffa",
+      "internalurl": "http://10.1.20.5:9696"
+    },
+    {
+      "internalurl": "http://10.1.20.5:9292/v1",
+      "adminurl": "http://10.20.50.5:9292/v1",
+      "service_id": "7fe066f0ef504f779f07f447e0636b21",
+      "region": "RegionOne",
+      "enabled": true,
+      "id": "8c1bb59a316145578fd33e7f4cf7c7f6",
+      "publicurl": "http://10.20.50.5:9292/v1"
+    },
+    {
+      "adminurl": "http:/10.20.50.5:8000/v1",
+      "service_id": "62af50dc502642c7a2142e90ac97d1b5",
+      "region": "RegionOne",
+      "publicurl": "http://10.20.50.5:8000/v1",
+      "enabled": true,
+      "id": "465751921cc94416b11d6a7353adc9f3",
+      "internalurl": "http://10.1.20.5:8000/v1"
+    },
+    {
+      "internalurl": "http://10.1.20.5:35357/v2.0",
+      "adminurl": "http://10.20.50.5:35357/v2.0",
+      "service_id": "90f5b2b80dcb4d65b70b11650a68541d",
+      "region": "RegionOne",
+      "enabled": true,
+      "id": "45663c1103a449968e748e1a28da2b2e",
+      "publicurl": "http://10.20.50.5:5000/v2.0"
+    },
+    {
+      "adminurl": "http://10.20.50.5:8774/v3",
+      "service_id": "9185bdf3269d4c5f8df1477c70f0d818",
+      "region": "RegionOne",
+      "publicurl": "http://10.20.50.5:8774/v3",
+      "enabled": true,
+      "id": "a83a8ee7d089402b88a58b2a8206dbb7",
+      "internalurl": "http://10.1.20.5:8774/v3"
+    },
+    {
+      "adminurl": "http://10.20.50.5:8773/services/Admin",
+      "service_id": "7cfae27ed5ca4a4cb73805a03ea51d69",
+      "region": "RegionOne",
+      "publicurl": "http://10.20.50.5:8773/services/Cloud",
+      "enabled": true,
+      "id": "233da836d7144490886db6d42857edcb",
+      "internalurl": "http://10.1.20.5:8773/services/Cloud"
+    },
+    {
+      "internalurl": "http://10.1.20.5:8777",
+      "adminurl": "http://10.20.50.5:8777",
+      "service_id": "578b0bc9ef9541a2ad569ac9ca8058ee",
+      "region": "RegionOne",
+      "enabled": true,
+      "id": "440472ebb422421dbb35dcb328c89484",
+      "publicurl": "http://10.20.50.5:8777"
+    },
+    {
+      "adminurl": "http://10.20.50.5:8774/v2/%(tenant_id)s",
+      "service_id": "449cc3d2fbab45afad15309e6ba13660",
+      "region": "RegionOne",
+      "publicurl": "http://10.20.50.5:8774/v2/%(tenant_id)s",
+      "enabled": true,
+      "id": "14156be5d3a64a59830f795436eb106c",
+      "internalurl": "http://10.1.20.5:8774/v2/%(tenant_id)s"
+    }
+  ]
+}
