@@ -1,4 +1,4 @@
 # pip install -e requirements.txt
 flask==0.10.1
-yaql==0.2.7
+yaql==1.0.2
 pyyaml==3.11

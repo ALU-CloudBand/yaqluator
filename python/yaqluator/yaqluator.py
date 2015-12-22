@@ -1,45 +1,57 @@
-import json
-import os
 import types
 
 import yaql
+import yaql.legacy
 import yaml
 
-
-def list_examples():
-    files = os.listdir("examples")
-    return [filename.replace('.json', '') for filename in files]
-
-def get_example(example_name):
-    with open("examples/"+example_name+".json", "r") as file:
-        return json.load(file)
+from yaql.language import exceptions
+from yaml.parser import ParserError
+try:
+    from utils.exceptions import YamlException, YaqlException
+except:
+    from ..utils.exceptions import YamlException, YaqlException
 
 
-def evaluate(yaql_expression, yaml_string):
+def _evaluate(yaql_expression, yaml_data, legacy=False):
+    if legacy:
+        factory = yaql.legacy.YaqlFactory()
+        context = yaql.legacy.create_context()
+        context['legacy'] = True
+    else:
+        factory = yaql.YaqlFactory()
+        context = yaql.create_context()
+
+    parser = factory.create()
+    return parser(yaql_expression).evaluate(yaml_data, context)
+
+
+def evaluate(yaql_expression, yaml_string, legacy=False):
+    """
+    Evaluate the given YAQL expression on the given YAML
+    :param str yaql_expression: the YAQL expression
+    :param str|dict yaml_string: the YAML/JSON (as a string or dict (json))
+    :return: the query result
+    :rtype: str
+    :raises YamlException: if the input YAML is invalid
+    :raises YaqlException: if the YAQL is melformed
+    """
 
     # Parse YAML
     try:
-        loaded_yaml = yaml.load(yaml_string)
+        loaded_yaml = yaml.load(yaml_string) if isinstance(yaml_string, basestring) else yaml_string
     except yaml.parser.ParserError as pe:
         raise YamlException("Invalid YAML: " + str(pe))
     except Exception as e:
         raise YamlException("Exception loading YAML: " + str(e))
 
-    # Parse YAQL expression
-    try:
-        parse = yaql.parse(yaql_expression)
-    except yaql.exceptions.YaqlGrammarException as ge:
-        raise YaqlException("Invalid YAQL expression: " + str(ge))
-    except Exception as e:
-        raise YaqlException("Exception parsing YAQL expression: " + str(e))
-
-
     # Evaluate YAQL expression against the YAML
     try:
-        res = parse.evaluate(loaded_yaml)
+        res = _evaluate(yaql_expression, loaded_yaml, legacy)
         if isinstance(res, types.GeneratorType):
             res = list(res)
         return res
+    except yaql.language.exceptions.YaqlParsingException as pe:
+        raise YaqlException("Invalid YAQL expression: " + str(pe))
     except Exception as e:
         raise YaqlException("Exception evaluating YAQL expression: " + str(e))
 
@@ -48,8 +60,16 @@ def _get_matched_values(partial_value, sub_value):
     return [key for key in partial_value.keys() if key.startswith(sub_value)]
 
 
-def auto_complete(yaql_expression, yaml_string):
-
+def auto_complete(yaql_expression, yaml_string, legacy=False):
+    """
+    Returns complement suggestions to the given YAQL expression
+    :param str yaql_expression: the YAQL expression
+    :param str | dict yaml_string:
+    :return: dictionary with two keys:
+        "yaql_valid"- is the YAQL expressio valid?
+        "suggestions"- list of suggestions
+    :rtype: dict
+    """
     yaql_exp_valid = True
     res = []
     try:
@@ -65,7 +85,7 @@ def auto_complete(yaql_expression, yaml_string):
                 sub_value = yaql_expression[last_dot_index + 1:]
                 expression_prefix = yaql_expression[:last_dot_index]
 
-            partial_value = evaluate(expression_prefix, yaml_string)
+            partial_value = evaluate(expression_prefix, yaml_string, legacy)
 
             res = []
             if partial_value:
@@ -90,21 +110,3 @@ def auto_complete(yaql_expression, yaml_string):
         "suggestions": list(set(res))
     }
 
-#data = get_example("nova_v2_show")
-#print auto_complete("$.server.links[$.href.port=90]", json.dumps(data))
-#print auto_complete("$.server.net1dfd740c6Index0", json.dumps(data))
-
-#$.server.links[$.href[$.url.length()>10]]
-#print evaluate("$.server.links[$.hr", json.dumps(data))
-
-class YamlException(Exception):
-    def __init__(self, message):
-
-        # Call the base class constructor with the parameters it needs
-        super(YamlException, self).__init__(message)
-
-class YaqlException(Exception):
-    def __init__(self, message):
-
-        # Call the base class constructor with the parameters it needs
-        super(YaqlException, self).__init__(message)

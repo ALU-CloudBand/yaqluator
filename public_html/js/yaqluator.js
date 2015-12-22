@@ -15,7 +15,8 @@ var apiExampleName = "/examples/";
 var autoComplete = apiServerString + "/autoComplete/";
 var evalReqObj = {
     "yaml": "",
-    "yaql_expression": ""
+    "yaql_expression": "",
+    "legacy": false
 };
 
 //methods
@@ -244,6 +245,7 @@ $(function () {
     $(document).on('click', '#evaluate', function () {
         evalReqObj.yaml = $yamlInput.val();
         evalReqObj.yaql_expression = $yaqlInput.val();
+        evalReqObj.legacy = $("#legacy").prop('checked');
         evaluate(evalReqObj);
 
     });

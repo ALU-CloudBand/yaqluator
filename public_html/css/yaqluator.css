@@ -246,3 +246,7 @@ html, body {
     height: 100%;
     padding-top: 70px;
 }
+
+.legacymode label{
+    font-weight: 400;
+}

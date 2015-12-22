@@ -4,10 +4,8 @@ import sys
 
 from flask import Flask, request, jsonify, current_app
 
-import yaqluator
-
-
-
+from yaqluator import yaqluator
+from utils import files
 
 
 # init the Flask app
@@ -28,6 +26,7 @@ def jsonp(func):
             return func(*args, **kwargs)
     return decorated_function
 
+
 @app.route("/evaluate/", methods=['POST'])
 @jsonp
 def handle_evaluate():
@@ -38,7 +37,9 @@ def handle_evaluate():
         return json_error_response("yaql_expression is missing")
     if not "yaml" in data:
         return json_error_response("yaml is missing")
-    return invoke(yaqluator.evaluate, {"yaql_expression": data["yaql_expression"], "yaml_string": data["yaml"]})
+    legacy = str(data.get("legacy", False)).lower() == "true"
+    return invoke(yaqluator.evaluate, {"yaql_expression": data["yaql_expression"], "yaml_string": data["yaml"], "legacy": legacy})
+
 
 @app.route("/autoComplete/", methods=['POST'])
 @jsonp
@@ -50,12 +51,14 @@ def handle_auto_complete():
         return json_error_response("yaql_expression is missing")
     if not "yaml" in data:
         return json_error_response("yaml is missing")
-    return invoke(yaqluator.auto_complete, {"yaql_expression": data["yaql_expression"], "yaml_string": data["yaml"]})
+    legacy = str(data.get("legacy", False)).lower() == "true"
+    return invoke(yaqluator.auto_complete, {"yaql_expression": data["yaql_expression"], "yaml_string": data["yaml"], "legacy":legacy})
+
 
 @app.route("/examples/", methods=["GET"])
 @jsonp
 def list_examples():
-    return invoke(yaqluator.list_examples, value_key="examples")
+    return invoke(files.list_examples, value_key="examples")
 
 
 @app.route("/examples/<example_name>", methods=["GET"])
@@ -63,7 +66,7 @@ def list_examples():
 def get_example(example_name):
     # if "exampleName" not in request.args:
     #     return json_error_response("example name is missing")
-    return invoke(yaqluator.get_example, {"example_name": example_name})
+    return invoke(files.get_example, {"example_name": example_name})
 
 
 def invoke(function, params=None, value_key="value"):
