@@ -13,6 +13,12 @@ except:
 
 
 def _evaluate(yaql_expression, yaml_data, legacy=False):
+    engine_options = {
+        'yaql.limitIterators': 100,
+        'yaql.convertSetsToLists': True,
+        'yaql.memoryQuota': 10000
+    }
+
     if legacy:
         factory = yaql.legacy.YaqlFactory()
         context = yaql.legacy.create_context()
@@ -21,7 +27,7 @@ def _evaluate(yaql_expression, yaml_data, legacy=False):
         factory = yaql.YaqlFactory()
         context = yaql.create_context()
 
-    parser = factory.create()
+    parser = factory.create(options=engine_options)
     return parser(yaql_expression).evaluate(yaml_data, context)
 
 
