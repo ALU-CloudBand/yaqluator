@@ -263,7 +263,7 @@ $(function () {
             url: url,
             type: "get",
             crossDomain: true,
-            dataType: "jsonp",
+            dataType: "json",
             success: function (result) {
                 //alert(JSON.stringify(result));
                 //$yamlInput.val(JSON.stringify(result.value, undefined, 4));

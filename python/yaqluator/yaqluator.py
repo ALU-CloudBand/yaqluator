@@ -4,6 +4,7 @@ import yaql
 import yaql.legacy
 import yaml
 
+from six import string_types
 from yaql.language import exceptions
 from yaml.parser import ParserError
 try:
@@ -44,7 +45,7 @@ def evaluate(yaql_expression, yaml_string, legacy=False):
 
     # Parse YAML
     try:
-        loaded_yaml = yaml.load(yaml_string) if isinstance(yaml_string, basestring) else yaml_string
+        loaded_yaml = yaml.load(yaml_string) if isinstance(yaml_string, string_types) else yaml_string
     except yaml.parser.ParserError as pe:
         raise YamlException("Invalid YAML: " + str(pe))
     except Exception as e:
