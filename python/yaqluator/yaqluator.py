@@ -45,7 +45,7 @@ def evaluate(yaql_expression, yaml_string, legacy=False):
 
     # Parse YAML
     try:
-        loaded_yaml = yaml.load(yaml_string) if isinstance(yaml_string, string_types) else yaml_string
+        loaded_yaml = yaml.load(yaml_string, Loader=yaml.FullLoader) if isinstance(yaml_string, string_types) else yaml_string
     except yaml.parser.ParserError as pe:
         raise YamlException("Invalid YAML: " + str(pe))
     except Exception as e:
