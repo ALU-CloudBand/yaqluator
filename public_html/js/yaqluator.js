@@ -126,13 +126,11 @@ function evaluate(obj) {
             if (result.statusCode > 0) {
                 $resultArea.val(JSON.stringify(result.value, undefined, 4));
             } else {
-                if (result.error && result.error.indexOf("YAQL") > -1) {
-                    $yaqlAlert.html(result.error);
-                    toggleError($yaqlAlert, true);
-                }
+                var errorHandled = false;
                 if (result.error && result.error.indexOf("YAML") > -1) {
                     $yamlAlert.html(result.error);
                     toggleError($yamlAlert, true);
+                    errorHandled = true;
 
                     // Check if the error message contains line and column and find the last occurrence
                     // Example error message:
@@ -150,11 +148,17 @@ function evaluate(obj) {
                         selectTextareaLine(document.getElementById("yamlInput"), lineNumber);
                     }
                 }
+                if (!errorHandled || (result.error && result.error.indexOf("YAQL") > -1)) {
+                    $yaqlAlert.html(result.error);
+                    toggleError($yaqlAlert, true);
+                }
             }
         },
         error: function (xhr, status, error) {
             //alert(status);
-            console.error(status);
+            console.error(error + " (" + status + ")");
+            $yaqlAlert.html(error);
+            toggleError($yaqlAlert, true);
         }
     });
 
@@ -203,7 +207,9 @@ function initYaqlInput() {
             },
             error: function (xhr, status, error) {
                 //alert(status);
-                console.error(status);
+                console.error(error + " (" + status + ")");
+                $yaqlAlert.html(error);
+                toggleError($yaqlAlert, true);
             }
         });
     });
