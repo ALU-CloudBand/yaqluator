@@ -12,8 +12,7 @@ ENV PYTHONUNBUFFERED 1
 
 # Install application dependencies from "requirements.txt"
 RUN pip install --upgrade pip
-COPY ./requirements_docker.txt /var/www/yaqluator.com/requirements.txt
+COPY ./requirements.txt /var/www/yaqluator.com/requirements.txt
 RUN pip install --no-cache-dir -r /var/www/yaqluator.com/requirements.txt
-
-# Copy application files
-# COPY . /var/www/yaqluator.com
+# Install Gunicorn WSGI HTTP server requirement for web service.
+RUN pip install --no-cache-dir gunicorn

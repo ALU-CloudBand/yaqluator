@@ -1,4 +1,8 @@
-#!/bin/env sh
+#!/bin/sh
+
+if [ -f .env ]; then
+    source ./.env
+fi
 
 echo Terminating current/old Docker processes...
 docker-compose rm -fs
